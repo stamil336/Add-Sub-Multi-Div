@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculation</title>
+
+  
+<style>
+  body{
+    background-image: url("https://img.freepik.com/premium-photo/beautiful-mesmerize-waves-colorful-pattern-wavy-surfaces-beautiful-background_666746-4459.jpg?w=900");
+    margin: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  
+  }
+  .container{
+   text-align: center;
+   margin-top:250px;
+    
+    
+  }
+  #num1{
+    height:30px;
+    width: 30%;
+    border-style: hidden;
+    border-radius: 20px;
+  
+  }
+  #num2{
+    height:30px;
+    width: 30%;
+    border-style: hidden;
+    border-radius: 20px;
+  }
+  .b1{
+    margin:20px 25px;
+    padding: 16px 32px;
+    border-radius: 5px;
+    border-style:inset;
+  }
+
+  .b1:active{
+    background-color:blue;
+    color: white;
+  }
+
+#result{
+  background-color:antiquewhite;
+  padding: 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius:50px ;
+
+}
+</style>
+</head>
+<body>
+<div class="container">
+   <input id="num1">
+   <input id="num2"><br>
+
+  <button class="b1" onclick="add()">Add</button>
+  <button class="b1" onclick="sub()">Subract</button><br>
+  <button class="b1" onclick="multi()">Multiple</button>
+  <button class="b1" onclick="div()">Division</button>
+
+  <p id="result">Result</p>
+</div>  
+
+<script>
+  //selecting input box1
+  //selecting input box2
+  var box1=document.getElementById("num1")
+  var box2=document.getElementById("num2")
+  //selecting result
+  var result=document.getElementById("result")
+  //create function
+  function add()
+  {
+     var box1value=Number(box1.value)
+     var box2value=Number(box2.value)
+     var total=box1value+box2value
+    result.textContent=total
+    
+  }
+  function sub()
+  {
+     var box1value=Number(box1.value)
+     var box2value=Number(box2.value)
+     var total=box1value-box2value
+    result.textContent=total
+    
+  }
+  function multi()
+  {
+     var box1value=Number(box1.value)
+     var box2value=Number(box2.value)
+     var total=box1value*box2value
+    result.textContent=total
+    
+  }
+  function div()
+  {
+     var box1value=Number(box1.value)
+     var box2value=Number(box2.value)
+     var total=box1value/box2value
+    result.textContent=total
+    
+  }
+
+</script>
+</body>
+</html>
